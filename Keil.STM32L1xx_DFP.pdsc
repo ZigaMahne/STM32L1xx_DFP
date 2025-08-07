@@ -15,6 +15,8 @@
   <releases>
     <release version="2.0.2-dev">
       Active development ...
+      Pack Description:
+      - Updated default debug configuration (MCU APBx Freeze registers)
       Updated Templates:
       - Added DWARF-5 debug information
       - Added generated output files
@@ -95,13 +97,12 @@
 
   <devices>
     <family Dfamily="STM32L1 Series" Dvendor="STMicroelectronics:13">
-      <processor Dcore="Cortex-M3" DcoreVersion="r1p1"/>
+      <processor Dcore="Cortex-M3" DcoreVersion="r1p1" Ddsp="NO_DSP"/>
 
       <book name="https://developer.arm.com/documentation/dui0552/latest" title="Cortex-M3 Generic User Guide"/>
 
       <description>
-STMicroelectronics' STM32L1 series uses ultra-low-leakage process technology with a autonomous dynamic voltage scaling and 5 low-power modes offering unprecedented platform flexibility to fit any application.
-Typical applications include Medical and handheld equipment, Application control and user interface, PC peripherals, gaming, GPS and sport equipment, Alarm systems, wired and wireless sensors, Video intercom, Utility metering
+High-performance STM32L1 MCUs with Arm Cortex-M3 core, memory protection unit (MPU), 33.3 DMIPS at 32 MHz.
       </description>
 
       <sequences>
@@ -504,7 +505,7 @@ Typical applications include Medical and handheld equipment, Application control
       <subFamily DsubFamily="STM32L100">
         <processor Dfpu="0" Dmpu="1" Dendian="Little-endian" Dclock="32000000"/>
         <debug svd="CMSIS/SVD/STM32L100.svd"/>
-        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000007;   // DBGMCU_CR: DBG_SLEEP, DBG_STOP, DBG_STANDBY
           __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ1: All Peripherals Operate as in Normal Mode
           __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
@@ -694,7 +695,7 @@ Typical applications include Medical and handheld equipment, Application control
       <subFamily DsubFamily="STM32L151">
         <processor Dfpu="0" Dmpu="1" Dendian="Little-endian" Dclock="32000000"/>
         <debug svd="CMSIS/SVD/STM32L151.svd"/>
-        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000007;   // DBGMCU_CR: DBG_SLEEP, DBG_STOP, DBG_STANDBY
           __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ1: All Peripherals Operate as in Normal Mode
           __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
@@ -1563,7 +1564,7 @@ Typical applications include Medical and handheld equipment, Application control
       <subFamily DsubFamily="STM32L152">
         <processor Dfpu="0" Dmpu="1" Dendian="Little-endian" Dclock="32000000"/>
         <debug svd="CMSIS/SVD/STM32L152.svd"/>
-        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000007;   // DBGMCU_CR: DBG_SLEEP, DBG_STOP, DBG_STANDBY
           __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ1: All Peripherals Operate as in Normal Mode
           __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
@@ -2430,7 +2431,7 @@ Typical applications include Medical and handheld equipment, Application control
       <subFamily DsubFamily="STM32L162">
         <processor Dfpu="0" Dmpu="1" Dendian="Little-endian" Dclock="32000000"/>
         <debug svd="CMSIS/SVD/STM32L162.svd"/>
-        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf">
+        <debugvars configfile="CMSIS/Debug/STM32L100_151_152_162.dbgconf" version="1.0.1">
           __var DbgMCU_CR      = 0x00000007;   // DBGMCU_CR: DBG_SLEEP, DBG_STOP, DBG_STANDBY
           __var DbgMCU_APB1_Fz = 0x00000000;   // DGBMCU_APB1_FZ1: All Peripherals Operate as in Normal Mode
           __var DbgMCU_APB2_Fz = 0x00000000;   // DGBMCU_APB2_FZ: All Peripherals Operate as in Normal Mode
